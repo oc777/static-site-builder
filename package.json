@@ -1,0 +1,39 @@
+{
+  "name": "static-site-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.js",
+  "scripts": {
+    "less": "lessc ./src/less/main.less ./src/css/styles.css",
+    "dev": "nodemon --inspect ./src/index.js",
+    "clean": "rm -rf ./dist",
+    "setup": "npm run clean && mkdir -p ./dist/css && mkdir -p ./dist/js"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "gulp",
+    "hbs",
+    "less"
+  ],
+  "author": "oc",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-handlebars-master": "^0.1.1",
+    "gulp-less": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "less": "^3.10.3",
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-hbs": "^2.3.0",
+    "express-less": "^0.1.0"
+  },
+  "nodemonConfig": {
+    "ext": "js,json,hbs,html,css,less"
+  }
+}
